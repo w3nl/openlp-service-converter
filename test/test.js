@@ -15,5 +15,5 @@ describe('openlp-service-converter', function() {
             .catch(() => {
                 done('error');
             });
-    });
+    }).timeout(15000);
 });
