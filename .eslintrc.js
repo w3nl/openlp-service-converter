@@ -33,7 +33,7 @@ module.exports = {
         "max-len": ["error", 120],
         "max-nested-callbacks": ["error", 3],
         "max-statements-per-line": ["error", { "max": 1 }],
-        "new-cap": "error",
+        "new-cap": "warn",
         "newline-after-var": ["error", "always"],
         "newline-before-return": "error",
         "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 3 }],
