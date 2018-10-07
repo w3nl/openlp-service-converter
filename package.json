@@ -1,25 +1,52 @@
 {
     "name": "openlp-service-converter",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Convert a OpenLP service",
+    "files": [
+        "src/index.js"
+    ],
     "main": "src/index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/w3nl/openlp-service-converter.git"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "lint": "eslint src/*.js --config .eslintrc.js",
+        "test": "mocha --reporter spec",
+        "cover-check": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+        "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
     },
-    "author": "",
+    "keywords": [
+        "openlp",
+        "converter",
+        "javascript",
+        "ppt",
+        "pptx",
+        "powerpoint",
+        "png",
+        "jpg",
+        "jpeg"
+    ],
+    "author": {
+        "name": "Pieter Wigboldus",
+        "url": "https://hckr.news/"
+    },
+    "bugs": {
+        "url": "https://github.com/w3nl/openlp-service-converter/issues"
+    },
     "license": "GPL-3.0",
     "dependencies": {
         "ppt-png": "^0.2.2",
         "unzip": "^0.1.11"
     },
     "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.0.3",
-        "@vue/cli-plugin-eslint": "^3.0.3",
-        "@vue/cli-service": "^3.0.3",
-        "@vue/eslint-config-prettier": "^3.0.4"
+        "coveralls": "^3.0.2",
+        "eslint": "^5.6.1",
+        "istanbul": "^0.4.5",
+        "mocha": "^5.2.0",
+        "mocha-lcov-reporter": "^1.3.0"
+    },
+    "engines": {
+        "node": ">= 6.0"
     }
 }
