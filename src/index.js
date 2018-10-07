@@ -25,7 +25,7 @@ class ScheduleConverter {
         this.files = [];
         this.data = [];
 
-        this.version = '0.2.0';
+        this.version = '0.2.1';
     }
 
     /**
@@ -150,9 +150,43 @@ class ScheduleConverter {
                 })
                     .wait()
                     .then(data => {
-                        component.data.push(data);
-                        resolve(data);
+                        component.data.push({
+                            type:   'presentation',
+                            file:   fileName,
+                            sheets: data
+                        });
+                        resolve({
+                            type:   'presentation',
+                            file:   fileName,
+                            sheets: data
+                        });
                     });
+            });
+        }
+
+        if (path.parse(fileName).ext == '.osj') {
+            return new Promise(function(resolve) {
+                component.data.push({
+                    type: 'service',
+                    file: fileName
+                });
+                resolve({
+                    type: 'service',
+                    file: fileName
+                });
+            });
+        }
+
+        if (path.parse(fileName).ext == '.jpg' || path.parse(fileName).ext == '.png') {
+            return new Promise(function(resolve) {
+                component.data.push({
+                    type: 'image',
+                    file: fileName
+                });
+                resolve({
+                    type: 'image',
+                    file: fileName
+                });
             });
         }
 

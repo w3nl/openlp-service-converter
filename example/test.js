@@ -8,6 +8,12 @@ new ScheduleConverter({
     .wait()
     .then(data => {
         data.forEach(entry => {
-            console.log('entries', entry.failed, entry.success, entry.files, entry.time);
+            if (entry.type == 'service') {
+                console.log('service', entry.file);
+            } else if (entry.type == 'image') {
+                console.log('image', entry.file);
+            } else if (entry.type == 'presentation') {
+                console.log('presentation', entry.file, entry.sheets.failed, entry.sheets.success, entry.sheets.files, entry.sheets.time);
+            }
         });
     });
