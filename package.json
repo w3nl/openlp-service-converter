@@ -1,6 +1,6 @@
 {
     "name": "openlp-service-converter",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "description": "Convert a OpenLP service",
     "files": [
         "src/index.js"
@@ -36,7 +36,7 @@
     },
     "license": "GPL-3.0",
     "dependencies": {
-        "ppt-png": "^0.2.2",
+        "ppt-png": "^0.2.4",
         "unzip": "^0.1.11"
     },
     "devDependencies": {

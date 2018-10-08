@@ -316,9 +316,9 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
-array-helpers@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/array-helpers/-/array-helpers-1.0.1.tgz#87c044a3c22ff95d963ae2f2e4cffe7b3bd13524"
+array-helpers@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/array-helpers/-/array-helpers-1.0.4.tgz#ea1be33c9aefbdeccb1e3011b9b0870dbde05c62"
 
 array-union@^1.0.1:
   version "1.0.2"
@@ -1358,11 +1358,11 @@ pngjs@^3.0.0, pngjs@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.3.tgz#85173703bde3edac8998757b96e5821d0966a21b"
 
-ppt-png@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/ppt-png/-/ppt-png-0.2.2.tgz#ddac646f1a47c2e5fd9fb2268ab13208ac4a6303"
+ppt-png@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/ppt-png/-/ppt-png-0.2.4.tgz#2eccce4c311e083a9dcb066060535d70ef807611"
   dependencies:
-    array-helpers "^1.0.1"
+    array-helpers "^1.0.4"
     glob "^7.1.3"
     jimp "^0.5.3"
     pdf2image "^1.2.3"
