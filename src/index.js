@@ -25,7 +25,7 @@ class ScheduleConverter {
         this.files = [];
         this.data = [];
 
-        this.version = '0.2.3';
+        this.version = '0.3.0';
     }
 
     /**
