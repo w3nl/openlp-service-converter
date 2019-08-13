@@ -9,7 +9,7 @@ describe('openlp-service-converter', function() {
             logLevel: 2
         })
             .wait()
-            .then(data => {
+            .then(() => {
                 done();
             })
             .catch(() => {
