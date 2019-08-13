@@ -1,3 +1,8 @@
+0.4.0 - 2019-08-13
+=====
+
+* Update all packages and the minimum node.js version.
+
 0.3.1 - 2019-07-04
 =====
 
