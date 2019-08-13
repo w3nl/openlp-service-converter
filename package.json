@@ -36,6 +36,7 @@
     },
     "license": "GPL-3.0",
     "dependencies": {
+        "fstream": "^1.0.12",
         "ppt-png": "^0.4.5",
         "unzip": "^0.1.11"
     },
